@@ -10,18 +10,23 @@ const emptyArray = [];
 
 // controllo che l'utente scriva effettivamente dei numeri
 
-while (emptyArray.length < 6) {
+while (emptyArray.length < 6){
 
-    console.log("l'array contiene:", emptyArray.length + "numeri");
-    
-    const selectedNumber = parseInt(prompt('inserisci un numero da 1 a 6'));
+    let numberSelected = parseInt(prompt("scrivi un numero"));
 
-    console.log(selectedNumber);
+    if (!isNan(numberSelected)){
+        
+        if (numberSelected % 2 === 1) {
+            emptyArray.push(numberSelected)
 
-    if (!isNaN(selectedNumber)) {
-        emptyArray.push(selectedNumber)
+            console.log(numberSelected, 'è dispari');
+
+            console.log("ho aggiunto un numero all'array");
+        } else (numberSelected % 2 === 0); {
+
+            console.log(numberSelected, 'è pari')
+
+            console.log("ho aggiunto nessun numero all'array");
+        }
     }
-        
-        
-
 }

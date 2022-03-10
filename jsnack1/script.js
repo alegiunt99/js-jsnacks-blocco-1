@@ -33,33 +33,23 @@ nameButton.addEventListener('click',
 
         console.log(invitedList);
 
+        let trovato = false; 
 
-        for (let i = 0; i < 4; i++){
-            if (nameUser === invitedList[0]) {
+        for (let i = 0; i < invitedList.length; i++){
+
+            // se il nome scritto è all'interno dell'array
+            //ho trovato il nome
+            if (nameUser === invitedList[i]) {
                 console.log("l'utente è sulla lista")
                 document.querySelector('#accepted').style.display = 'block';
                 document.querySelector('#not-accepted').style.display = 'none';
 
-            }
-            else if (nameUser === invitedList[1]) {
-                console.log("l'utente è sulla lista")
-                document.querySelector('#accepted').style.display = 'block';
-                document.querySelector('#not-accepted').style.display = 'none';
-            }
-            else if (nameUser === invitedList[2]) {
-                console.log("l'utente è sulla lista")
-                document.querySelector('#accepted').style.display = 'block';
-                document.querySelector('#not-accepted').style.display = 'none';
-            }
-            else if (nameUser === invitedList[3]) {
-                console.log("l'utente è sulla lista")
-                document.querySelector('#accepted').style.display = 'block';
-                document.querySelector('#not-accepted').style.display = 'none';
-            }
-            else {
-                console.log("l'utente NON è sulla lista")
-                document.querySelector('#not-accepted').style.display = 'block';
-                document.querySelector('#accepted').style.display = 'none';
+                trovato = true;
             }
         }   
+
+        if (!trovato) {
+            console.log('non sei nella lista');
+            document.querySelector('#not-accepted').style.display = 'block';
+        }
 })
