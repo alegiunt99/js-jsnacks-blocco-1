@@ -42,11 +42,3 @@ for (let i = 1; i < 7; i++){
 
 
 }
-
-
-
-// a questo punto sono sicuro che ha inserito 6 numeri
-
-// ora
-
-
