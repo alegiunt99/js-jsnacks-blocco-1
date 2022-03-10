@@ -18,5 +18,10 @@ while (emptyArray.length < 6) {
 
     console.log(selectedNumber);
 
-    
+    if (!isNaN(selectedNumber)) {
+        emptyArray.push(selectedNumber)
+    }
+        
+        
+
 }
