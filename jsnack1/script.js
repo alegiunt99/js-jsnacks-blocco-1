@@ -16,12 +16,14 @@ const nameInput = document.querySelector('#name-input');
 
 const nameButton = document.querySelector('#name-button');
 
-document.querySelector('#accepted').style.display = 'none';
 
-document.querySelector('#not-accepted').style.display = 'none';
 
 nameButton.addEventListener('click',
     function () {
+
+        document.querySelector('#accepted').style.display = 'none';
+
+        document.querySelector('#not-accepted').style.display = 'none';
 
         const nameUser = nameInput.value;
 
@@ -31,4 +33,33 @@ nameButton.addEventListener('click',
 
         console.log(invitedList);
 
+
+        for (let i = 0; i < 4; i++){
+            if (nameUser === invitedList[0]) {
+                console.log("l'utente è sulla lista")
+                document.querySelector('#accepted').style.display = 'block';
+                document.querySelector('#not-accepted').style.display = 'none';
+
+            }
+            else if (nameUser === invitedList[1]) {
+                console.log("l'utente è sulla lista")
+                document.querySelector('#accepted').style.display = 'block';
+                document.querySelector('#not-accepted').style.display = 'none';
+            }
+            else if (nameUser === invitedList[2]) {
+                console.log("l'utente è sulla lista")
+                document.querySelector('#accepted').style.display = 'block';
+                document.querySelector('#not-accepted').style.display = 'none';
+            }
+            else if (nameUser === invitedList[3]) {
+                console.log("l'utente è sulla lista")
+                document.querySelector('#accepted').style.display = 'block';
+                document.querySelector('#not-accepted').style.display = 'none';
+            }
+            else {
+                console.log("l'utente NON è sulla lista")
+                document.querySelector('#not-accepted').style.display = 'block';
+                document.querySelector('#accepted').style.display = 'none';
+            }
+        }   
 })

@@ -6,10 +6,12 @@
 }
 
 #accepted{
+    display: none;
     color: green;
 }
 
 #not-accepted {
+    display: none;
     color: red;
 }
 
